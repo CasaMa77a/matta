@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_exhibitions_exhibitions",
+  "info": {
+    "displayName": "Exhibitions"
+  },
+  "options": {},
+  "attributes": {
+    "nome": {
+      "type": "text"
+    },
+    "data": {
+      "type": "string"
+    },
+    "luogo": {
+      "type": "text"
+    },
+    "ora": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

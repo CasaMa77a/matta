@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "artist",
+    "mainField": "nome"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "sortable-entries": {
+      "enabled": true
+    }
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "nome_eng": {
+      "type": "text"
+    },
+    "link": {
+      "type": "text"
+    },
+    "bio": {
+      "type": "blocks"
+    },
+    "bio_eng": {
+      "type": "blocks"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

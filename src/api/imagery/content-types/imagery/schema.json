@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imageries",
+  "info": {
+    "singularName": "imagery",
+    "pluralName": "imageries",
+    "displayName": "imagery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "sortable-entries": {
+      "enabled": true
+    }
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
