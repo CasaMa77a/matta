@@ -25,6 +25,9 @@
     "link": {
       "type": "text"
     },
+    "linkMostra": {
+      "type": "string"
+    },
     "bio": {
       "type": "blocks"
     },
