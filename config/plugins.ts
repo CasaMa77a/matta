@@ -9,9 +9,9 @@ export default ({ env }) => ({
     config: {
       provider: 'cloudinary',
       providerOptions: {
-        cloud_name: env('Matta'),
-        api_key: env('279785463378244'),
-        api_secret: env('mDWwqUzcZ3EuVZPJQtfitzjMhSY'),
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
       },
       actionOptions: {
         upload: {},
