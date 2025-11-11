@@ -13,14 +13,22 @@ export default [
             'data:',
             'blob:',
             'market-assets.strapi.io',
-            'res.cloudinary.com', // ✅ Permetti immagini da Cloudinary
+            'res.cloudinary.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'market-assets.strapi.io',
-            'res.cloudinary.com', // ✅ Permetti video/audio da Cloudinary
+            'res.cloudinary.com',
+          ],
+          'frame-src': [
+            "'self'",
+            'res.cloudinary.com', // ✅ Permetti iframe per PDF
+          ],
+          'object-src': [
+            "'self'",
+            'res.cloudinary.com', // ✅ Permetti embed PDF
           ],
           upgradeInsecureRequests: null,
         },
