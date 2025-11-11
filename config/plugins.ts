@@ -5,10 +5,6 @@ export default ({ env }) => ({
       displayField: 'nome'
     }
   },
-  // Disabilita Strapi Cloud
-  'strapi-cloud': {
-    enabled: false,
-  },
   upload: {
     config: {
       provider: 'cloudinary',
