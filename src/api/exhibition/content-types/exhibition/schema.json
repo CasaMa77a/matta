@@ -49,16 +49,6 @@
         "audios"
       ]
     },
-    "CVpdf": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "sortOrder": {
       "type": "integer",
       "default": 0
