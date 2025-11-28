@@ -14,6 +14,11 @@
     "nome": {
       "type": "text"
     },
+
+     "artista": {
+      "type": "text"
+    },
+    
     "luogo": {
       "type": "text"
     },
