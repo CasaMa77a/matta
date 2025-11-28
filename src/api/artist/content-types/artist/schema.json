@@ -25,6 +25,9 @@
     "link": {
       "type": "text"
     },
+    "link_social": {
+      "type": "text"
+    },
     "linkMostra": {
       "type": "string"
     },
