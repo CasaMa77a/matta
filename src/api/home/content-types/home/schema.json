@@ -34,6 +34,17 @@
         "videos",
         "audios"
       ]
+    },
+
+    "img_home_mobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
