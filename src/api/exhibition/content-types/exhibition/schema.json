@@ -49,6 +49,16 @@
         "audios"
       ]
     },
+    "works_nome": {
+      "type": "string"
+    },
+    "works_media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "sortOrder": {
       "type": "integer",
       "default": 0
