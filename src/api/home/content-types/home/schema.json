@@ -25,6 +25,9 @@
     "data": {
       "type": "text"
     },
+    "link": {
+      "type": "text"
+    },
     "img_home": {
       "type": "media",
       "multiple": false,
