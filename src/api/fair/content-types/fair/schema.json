@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fairs",
+  "info": {
+    "singularName": "fair",
+    "pluralName": "fairs",
+    "displayName": "fair"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "sortable-entries": {
+      "enabled": true
+    }
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "nome_eng": {
+      "type": "string"
+    },
+    "data": {
+      "type": "string"
+    },
+    "luogo": {
+      "type": "text"
+    },
+    "link": {
+      "type": "text"
+    },
+    "current": {
+      "type": "boolean"
+    },
+    "descrizione": {
+      "type": "blocks"
+    },
+    "descrizione_eng": {
+      "type": "blocks"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "works_nome": {
+      "type": "string"
+    },
+    "works_media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
