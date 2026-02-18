@@ -395,7 +395,10 @@ export interface ApiArtistArtist extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    CVpdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     link: Schema.Attribute.Text;
+    link_social: Schema.Attribute.Text;
+    linkMostra: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -436,7 +439,6 @@ export interface ApiExhibitionExhibition extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     current: Schema.Attribute.Boolean;
-    CVpdf: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     data: Schema.Attribute.String;
     descrizione: Schema.Attribute.Blocks;
     descrizione_eng: Schema.Attribute.Blocks;
@@ -459,6 +461,52 @@ export interface ApiExhibitionExhibition extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    works_media: Schema.Attribute.Media<'images', true>;
+    works_nome: Schema.Attribute.String;
+  };
+}
+
+export interface ApiFairFair extends Struct.CollectionTypeSchema {
+  collectionName: 'fairs';
+  info: {
+    displayName: 'fair';
+    pluralName: 'fairs';
+    singularName: 'fair';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    'sortable-entries': {
+      enabled: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    current: Schema.Attribute.Boolean;
+    data: Schema.Attribute.String;
+    descrizione: Schema.Attribute.Blocks;
+    descrizione_eng: Schema.Attribute.Blocks;
+    link: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::fair.fair'> &
+      Schema.Attribute.Private;
+    luogo: Schema.Attribute.Text;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    nome: Schema.Attribute.String;
+    nome_eng: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    works_media: Schema.Attribute.Media<'images', true>;
+    works_nome: Schema.Attribute.String;
   };
 }
 
@@ -473,11 +521,16 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    artista: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     data: Schema.Attribute.Text;
     img_home: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img_home_mobile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    link_home: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
@@ -1039,6 +1092,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::artist.artist': ApiArtistArtist;
       'api::exhibition.exhibition': ApiExhibitionExhibition;
+      'api::fair.fair': ApiFairFair;
       'api::home.home': ApiHomeHome;
       'api::imagery.imagery': ApiImageryImagery;
       'plugin::content-releases.release': PluginContentReleasesRelease;
